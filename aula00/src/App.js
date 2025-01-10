@@ -1,6 +1,6 @@
 function App() {
   return (
-    <div> Baum!!! </div>
+    <div>Learn React</div>
   );
 }
 
