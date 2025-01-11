@@ -4,7 +4,7 @@ import Filter from "./Filter";
 function App() {
   return (
     <div>
-      <h1>Student Performance Analysis</h1>
+      <h1 style={{ textAlign: "center" }}>Student Performance Analysis</h1>
       <Filter />
     </div>
   );
