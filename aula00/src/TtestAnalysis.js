@@ -1,6 +1,18 @@
 import React from "react";
 import { jStat } from "jstat";
+import { Bar } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Legend,
+} from "chart.js";
 import data from "./data.json";
+
+// Register the chart.js components
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
 const TTestAnalysis = () => {
   const calculateMean = (arr) => arr.reduce((sum, val) => sum + val, 0) / arr.length;
@@ -48,10 +60,57 @@ const TTestAnalysis = () => {
     }
   }
 
+  // Prepare data for the chart
+  const chartData = {
+    labels: results.map((result) => result.yearPair),
+    datasets: [
+      {
+        label: "T-Statistic",
+        data: results.map((result) => parseFloat(result.tStatistic)),
+        backgroundColor: results.map((result) =>
+          result.significant === "Yes" ? "rgba(75, 192, 192, 0.8)" : "rgba(192, 75, 75, 0.8)"
+        ),
+        borderColor: "rgba(0, 0, 0, 1)",
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const chartOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: true,
+      },
+      tooltip: {
+        callbacks: {
+          label: (context) => `T-Statistic: ${context.raw}`,
+        },
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: "T-Statistic",
+        },
+      },
+      x: {
+        title: {
+          display: true,
+          text: "Year Pair Comparison",
+        },
+      },
+    },
+  };
+
   return (
     <div>
       <h2>Statistical Analysis: T-tests</h2>
-      <table border="1" style={{ borderCollapse: "collapse", width: "100%" }}>
+
+      {/* Table */}
+      <table border="1" style={{ borderCollapse: "collapse", width: "100%", marginBottom: "20px" }}>
         <thead>
           <tr>
             <th>Year Pair</th>
@@ -71,6 +130,11 @@ const TTestAnalysis = () => {
           ))}
         </tbody>
       </table>
+
+      {/* Chart */}
+      <div>
+        <Bar data={chartData} options={chartOptions} />
+      </div>
     </div>
   );
 };

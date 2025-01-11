@@ -1,11 +1,11 @@
 import React from "react";
-import TTestAnalysis from "./TtestAnalysis";
+import Filter from "./Filter";
 
 function App() {
   return (
     <div>
       <h1>Student Performance Analysis</h1>
-      <TTestAnalysis />
+      <Filter />
     </div>
   );
 }
