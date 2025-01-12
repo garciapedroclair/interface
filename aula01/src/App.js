@@ -1,8 +1,12 @@
 import React from "react";
+import MyBoxPlot from "./BoxPlot";
 
 function App() {
   return (
-    <p>Baum</p>
+    <div>
+      <p>Baum</p>
+      <MyBoxPlot />
+    </div>
   );
 }
 

@@ -14,4 +14,6 @@ Aulas de FrontEnd com Javascript (ReactJS)
   - npm install web-vitals
   - cd aula00
   - npm start
+- Create a boxplot
+  - npm install recharts
 
