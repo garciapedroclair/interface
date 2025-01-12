@@ -29,8 +29,8 @@ function MyBoxPlot() {
     };
 
      // Perform t-tests
-     const tTest2022vs2023 = performTTest(data2022, data2023);
-     const tTest2023vs2024 = performTTest(data2023, data2024);
+     const tTest2022vs2023 = performTTest(data2022, data2023); 
+     const tTest2023vs2024 = performTTest(data2023, data2024); 
      const tTest2022vs2024 = performTTest(data2022, data2024);
 
     return (
