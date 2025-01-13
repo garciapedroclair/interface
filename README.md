@@ -11,8 +11,7 @@ Aulas de FrontEnd com Javascript (ReactJS)
   - git commit -m "Modelo de Aula"
   - Dar permissão a um colaborador
 - Iniciar o Aplicativo
-  - npx create-react-app aula00 (!E Aula00)
-  - npm install web-vitals
+  - npm install
   - cd aula00
   - npm start
 
