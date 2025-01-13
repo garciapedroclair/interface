@@ -11,8 +11,8 @@ Aulas de FrontEnd com Javascript (ReactJS)
   - git commit -m "Modelo de Aula"
   - Dar permissão a um colaborador
 - Iniciar o Aplicativo
-  - npm install
   - cd aula00
+  - npm install
   - npm start
 
 ### 2 - Declarando variáveis
