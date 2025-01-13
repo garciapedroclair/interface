@@ -1,7 +1,8 @@
 # interface
 Aulas de FrontEnd com Javascript (ReactJS)
 
-## Script da Aula:
+## Script das Aulas:
+### 1 - Configurando o Ambiente
 - Iniciar o GitHub
   - Criar (explicar) o repositório
   - Abrir no VsCode
@@ -14,6 +15,7 @@ Aulas de FrontEnd com Javascript (ReactJS)
   - npm install web-vitals
   - cd aula00
   - npm start
-- Create a boxplot
-  - npm install recharts
+
+### 2 - Declarando variáveis
+
 
